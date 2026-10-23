@@ -1,0 +1,43 @@
+<!-- Sidebar Adaptativo: Fijo en Desktop / Offcanvas en Móvil -->
+<div class="offcanvas-md offcanvas-start col-md-2 sidebar p-4 d-flex flex-column bg-white border-end" id="sidebarMenu" tabindex="-1" aria-labelledby="sidebarMenuLabel" style="min-height: 100vh;">
+    
+    <!-- Encabezado exclusivo para pantalla móvil -->
+    <div class="offcanvas-header px-0 pt-0 pb-3 d-md-none border-bottom mb-3">
+        <h5 class="offcanvas-title fw-bold text-dark d-flex align-items-center gap-2" id="sidebarMenuLabel">
+            <i class="bi bi-box-seam text-primary"></i> InsumosApp
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+    </div>
+
+    <!-- Encabezado para pantalla de escritorio -->
+    <h5 class="fw-bold text-dark mb-4 d-none d-md-flex align-items-center gap-2">
+        <i class="bi bi-box-seam text-primary"></i> InsumosApp
+    </h5>
+    
+    <!-- Menú de Módulos -->
+    <ul class="nav flex-column gap-2" id="sidebar-menu">
+        <li class="nav-item">
+            <a class="nav-link active rounded-3 nav-module" href="#" data-section="sec-dashboard" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
+                <i class="bi bi-pie-chart me-2"></i> Dashboard
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link rounded-3 nav-module" href="#" data-section="sec-insumos" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
+                <i class="bi bi-box me-2"></i> Insumos
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link rounded-3 nav-module" href="#" data-section="sec-usuarios" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
+                <i class="bi bi-people me-2"></i> Usuarios
+            </a>
+        </li>
+    </ul>
+
+    <!-- Botón Salir -->
+    <div class="mt-auto pt-4">
+        <hr class="text-muted opacity-25">
+        <button id="btn-logout" class="btn btn-light w-100 text-start text-danger fw-medium rounded-3">
+            <i class="bi bi-box-arrow-left me-2"></i> Salir
+        </button>
+    </div>
+</div>
