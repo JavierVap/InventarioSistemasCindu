@@ -26,6 +26,8 @@ if (empty($cedula) || empty($nombre) || empty($password) || $departamento_id <= 
     exit;
 }
 
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
 try {
     $stmt = $pdo->prepare("
         INSERT INTO usuarios (cedula, nombre, password, departamento_id, rol)
@@ -34,7 +36,7 @@ try {
     $stmt->execute([
         ':cedula' => $cedula,
         ':nombre' => $nombre,
-        ':password' => $password, // Si usas hashes en el futuro: password_hash($password, PASSWORD_DEFAULT)
+        ':password' => $passwordHash,
         ':dept_id' => $departamento_id,
         ':rol' => $rol
     ]);

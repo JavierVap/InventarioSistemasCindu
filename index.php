@@ -20,9 +20,7 @@ include 'includes/head.php';
 <div id="login-view">
     <div class="login-card">
         <div class="text-center mb-4">
-            <div class="d-inline-block bg-primary bg-opacity-10 p-3 rounded-4 mb-3">
-                <i class="bi bi-box-seam text-primary" style="font-size: 2.5rem;"></i>
-            </div>
+            <img src="assets/img/logocindu.png" alt="Cindu de Venezuela" class="login-logo">
             <h4 class="fw-bold text-dark mb-1">Insumos Control</h4>
             <p class="text-muted" style="font-size: 0.9rem;">Acceso al sistema corporativo</p>
         </div>

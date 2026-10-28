@@ -210,3 +210,113 @@
         </div>
     </div>
 </div>
+
+<!-- MODAL: REGISTRAR EQUIPO -->
+<div class="modal fade" id="modalNuevoEquipo" tabindex="-1" aria-labelledby="modalNuevoEquipoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0" style="border-radius: 20px;">
+                    <div class="modal-header border-0 pt-4 px-4">
+                        <h5 class="modal-title fw-bold" id="modalNuevoEquipoLabel">Registrar Equipo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form id="form-nuevo-equipo">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-nuevo-tipo">Tipo de equipo</label>
+                                    <select class="form-select login-input" id="equipo-nuevo-tipo" required>
+                                        <option value="">Seleccione...</option>
+                                        <option value="PC">PC</option>
+                                        <option value="Laptop">Laptop</option>
+                                        <option value="Tableta">Tableta</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-nuevo-marca">Marca</label>
+                                    <input type="text" class="form-control login-input" id="equipo-nuevo-marca" maxlength="100" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-nuevo-serial">Serial</label>
+                                    <input type="text" class="form-control login-input" id="equipo-nuevo-serial" maxlength="100" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-nuevo-departamento">Departamento</label>
+                                    <select class="form-select login-input" id="equipo-nuevo-departamento" required>
+                                        <option value="">Cargando departamentos...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-nuevo-responsable">Usuario o responsable asignado (opcional)</label>
+                                    <input type="text" class="form-control login-input" id="equipo-nuevo-responsable" list="sugerencias-responsables" maxlength="150" autocomplete="off">
+                                    <datalist id="sugerencias-responsables"></datalist>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-nuevo-fecha">Última modificación (SO o programas)</label>
+                                    <input type="date" class="form-control login-input" id="equipo-nuevo-fecha">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label text-muted" for="equipo-nuevo-notas">Notas</label>
+                                    <textarea class="form-control login-input" id="equipo-nuevo-notas" rows="3" maxlength="2000" placeholder="Observaciones, sistema operativo, programas instalados..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-brand w-100 py-2">Guardar Equipo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- MODAL: EDITAR EQUIPO -->
+<div class="modal fade" id="modalEditarEquipo" tabindex="-1" aria-labelledby="modalEditarEquipoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content border-0" style="border-radius: 20px;">
+                    <div class="modal-header border-0 pt-4 px-4">
+                        <h5 class="modal-title fw-bold" id="modalEditarEquipoLabel">Editar Equipo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form id="form-editar-equipo">
+                            <input type="hidden" id="equipo-editar-id">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-editar-tipo">Tipo de equipo</label>
+                                    <select class="form-select login-input" id="equipo-editar-tipo" required>
+                                        <option value="">Seleccione...</option>
+                                        <option value="PC">PC</option>
+                                        <option value="Laptop">Laptop</option>
+                                        <option value="Tableta">Tableta</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-editar-marca">Marca</label>
+                                    <input type="text" class="form-control login-input" id="equipo-editar-marca" maxlength="100" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-editar-serial">Serial</label>
+                                    <input type="text" class="form-control login-input" id="equipo-editar-serial" maxlength="100" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-editar-departamento">Departamento</label>
+                                    <select class="form-select login-input" id="equipo-editar-departamento" required>
+                                        <option value="">Cargando departamentos...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-editar-responsable">Usuario o responsable asignado (opcional)</label>
+                                    <input type="text" class="form-control login-input" id="equipo-editar-responsable" list="sugerencias-responsables" maxlength="150" autocomplete="off">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted" for="equipo-editar-fecha">Última modificación (SO o programas)</label>
+                                    <input type="date" class="form-control login-input" id="equipo-editar-fecha">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label text-muted" for="equipo-editar-notas">Notas</label>
+                                    <textarea class="form-control login-input" id="equipo-editar-notas" rows="3" maxlength="2000"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 py-2">Guardar Cambios</button>
+                        </form>
+                    </div>
+        </div>
+    </div>
+</div>

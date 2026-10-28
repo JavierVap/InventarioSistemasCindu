@@ -3,15 +3,15 @@
     
     <!-- Encabezado exclusivo para pantalla móvil -->
     <div class="offcanvas-header px-0 pt-0 pb-3 d-md-none border-bottom mb-3">
-        <h5 class="offcanvas-title fw-bold text-dark d-flex align-items-center gap-2" id="sidebarMenuLabel">
-            <i class="bi bi-box-seam text-primary"></i> InsumosApp
+        <h5 class="offcanvas-title fw-bold text-dark d-flex align-items-center" id="sidebarMenuLabel">
+            <img src="assets/img/logocindu.png" alt="Cindu de Venezuela" class="sidebar-logo">
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
     </div>
 
     <!-- Encabezado para pantalla de escritorio -->
-    <h5 class="fw-bold text-dark mb-4 d-none d-md-flex align-items-center gap-2">
-        <i class="bi bi-box-seam text-primary"></i> InsumosApp
+    <h5 class="fw-bold text-dark mb-4 d-none d-md-flex align-items-center">
+        <img src="assets/img/logocindu.png" alt="Cindu de Venezuela" class="sidebar-logo">
     </h5>
     
     <!-- Menú de Módulos -->
@@ -29,6 +29,11 @@
         <li class="nav-item">
             <a class="nav-link rounded-3 nav-module" href="#" data-section="sec-usuarios" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
                 <i class="bi bi-people me-2"></i> Usuarios
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link rounded-3 nav-module" href="#" data-section="sec-equipos" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu">
+                <i class="bi bi-laptop me-2"></i> Equipos
             </a>
         </li>
     </ul>

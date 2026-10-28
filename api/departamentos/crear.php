@@ -16,22 +16,20 @@ if (empty($nombre)) {
     exit();
 }
 
-// Verificar duplicado
-$stmt_check = $conexion->prepare("SELECT id FROM departamentos WHERE nombre = ?");
-$stmt_check->bind_param("s", $nombre);
-$stmt_check->execute();
-if ($stmt_check->get_result()->num_rows > 0) {
-    echo json_encode(['status' => 'error', 'mensaje' => 'El departamento ya se encuentra registrado.']);
-    exit();
-}
-$stmt_check->close();
+try {
+    $stmt_check = $pdo->prepare("SELECT id FROM departamentos WHERE nombre = :nombre LIMIT 1");
+    $stmt_check->execute([':nombre' => $nombre]);
 
-$stmt = $conexion->prepare("INSERT INTO departamentos (nombre) VALUES (?)");
-$stmt->bind_param("s", $nombre);
+    if ($stmt_check->fetch()) {
+        echo json_encode(['status' => 'error', 'mensaje' => 'El departamento ya se encuentra registrado.']);
+        exit();
+    }
 
-if ($stmt->execute()) {
+    $stmt = $pdo->prepare("INSERT INTO departamentos (nombre) VALUES (:nombre)");
+    $stmt->execute([':nombre' => $nombre]);
+
     echo json_encode(['status' => 'success', 'mensaje' => 'Departamento creado exitosamente.']);
-} else {
+} catch (PDOException $e) {
+    http_response_code(500);
     echo json_encode(['status' => 'error', 'mensaje' => 'Error al guardar el departamento.']);
 }
-$stmt->close();

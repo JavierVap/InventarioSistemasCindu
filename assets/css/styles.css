@@ -41,6 +41,14 @@ body {
     z-index: 10;
 }
 
+.login-logo {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 1rem;
+}
+
 .login-input {
     background-color: #f1f5f9;
     border: 1px solid transparent;
@@ -71,6 +79,13 @@ body {
     background-color: var(--sidebar-bg); 
     min-height: 100vh; 
     border-right: 1px solid #e2e8f0;
+}
+
+.sidebar-logo {
+    display: block;
+    width: 120px;
+    max-width: 100%;
+    height: auto;
 }
         
 .nav-link.active {
