@@ -10,6 +10,8 @@ let totalInventario = 0;
 let chartEstadoInstance = null;
 let chartDeptInstance = null;
 
+const RIF_EMPRESA = 'J-00026092-3';
+
 function escaparHTML(valor) {
     return String(valor ?? '').replace(/[&<>"']/g, caracter => ({
         '&': '&amp;',
@@ -572,7 +574,8 @@ document.addEventListener('DOMContentLoaded', function () {
             worksheet.mergeCells('C2:H2');
             worksheet.mergeCells('C3:H3');
             worksheet.mergeCells('C4:H4');
-            worksheet.getCell('C1').value = 'CINDU DE VENEZUELA, C.A.';
+            worksheet.mergeCells('C5:H5');
+            worksheet.getCell('C1').value = `CINDU DE VENEZUELA, C.A. - RIF: ${RIF_EMPRESA}`;
             worksheet.getCell('C2').value = 'SISTEMA DE CONTROL DE INSUMOS Y EQUIPOS DE OFICINA';
             worksheet.getCell('C3').value = `REPORTE GENERAL DE INVENTARIO - Emitido: ${fechaHoy}`;
             worksheet.getCell('C4').value = `Generado por: ${userName} (${userDept})`;
@@ -582,7 +585,7 @@ document.addEventListener('DOMContentLoaded', function () {
             worksheet.getRow(4).height = 22;
             worksheet.getRow(5).height = 10;
 
-            worksheet.getCell('C1').font = { bold: true, size: 16, color: { argb: 'FFFFFFFF' } };
+            worksheet.getCell('C1').font = { bold: true, size: 14, color: { argb: 'FFFFFFFF' } };
             worksheet.getCell('C1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF0EA5E9' } };
             ['C1', 'C2', 'C3', 'C4'].forEach(celda => {
                 worksheet.getCell(celda).alignment = { horizontal: 'center', vertical: 'middle' };
@@ -716,7 +719,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 // Membrete Institucional
-                doc.setFontSize(15);
+                doc.setFontSize(13);
                 doc.setTextColor(15, 23, 42);
                 doc.setFont("helvetica", "bold");
                 doc.text("CINDU DE VENEZUELA, C.A.", inicioX, 22);
@@ -725,7 +728,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 doc.setFont("helvetica", "normal");
                 doc.setTextColor(100, 116, 139);
                 doc.text("Sistema de Control Interno de Insumos y Equipos", inicioX, 27);
-                doc.text("RIF: J-00000000-0 | Puerto Cabello, Venezuela", inicioX, 32);
+                doc.setFont("helvetica", "bold");
+                doc.setTextColor(14, 116, 189);
+                doc.text(`RIF: ${RIF_EMPRESA}`, inicioX, 35);
 
                 // Metadatos alineados a la derecha
                 doc.setFontSize(8);

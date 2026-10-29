@@ -23,6 +23,7 @@ include 'includes/head.php';
             <img src="assets/img/logocindu.png" alt="Cindu de Venezuela" class="login-logo">
             <h4 class="fw-bold text-dark mb-1">Insumos Control</h4>
             <p class="text-muted" style="font-size: 0.9rem;">Acceso al sistema corporativo</p>
+            <p class="text-muted small mb-0">RIF: J-00026092-3</p>
         </div>
         <form id="login-form">
             <div class="mb-3">

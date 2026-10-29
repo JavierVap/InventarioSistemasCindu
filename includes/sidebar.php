@@ -3,15 +3,17 @@
     
     <!-- Encabezado exclusivo para pantalla móvil -->
     <div class="offcanvas-header px-0 pt-0 pb-3 d-md-none border-bottom mb-3">
-        <h5 class="offcanvas-title fw-bold text-dark d-flex align-items-center" id="sidebarMenuLabel">
+        <h5 class="offcanvas-title fw-bold text-dark d-flex flex-column align-items-start" id="sidebarMenuLabel">
             <img src="assets/img/logocindu.png" alt="Cindu de Venezuela" class="sidebar-logo">
+            <span class="text-muted small mt-1">RIF: J-00026092-3</span>
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
     </div>
 
     <!-- Encabezado para pantalla de escritorio -->
-    <h5 class="fw-bold text-dark mb-4 d-none d-md-flex align-items-center">
+    <h5 class="fw-bold text-dark mb-4 d-none d-md-flex flex-column align-items-start">
         <img src="assets/img/logocindu.png" alt="Cindu de Venezuela" class="sidebar-logo">
+        <span class="text-muted small mt-1">RIF: J-00026092-3</span>
     </h5>
     
     <!-- Menú de Módulos -->
